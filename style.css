@@ -34,6 +34,7 @@ body{
     background-color: red;
     border: 2px solid black;
     rotate: 45deg;
+    transition:all 1s;
 }
 .lozenge1{
     margin: 120px 0px 10px 20px;
@@ -44,7 +45,7 @@ body{
 /* -----------------------------------------> equal and circle */
 .equalAndCircleContainer{
     display: flex;
-    margin:50px 0px;
+    margin-top:50px;
 }
 /* ------------------------------> equal*/
 .equalContainer{
@@ -73,7 +74,6 @@ body{
 .ractangle{
     width: 150px;
     height: 350px;
-    background-color: white;
     border: 2px solid black;
     margin: 50px;
     text-align: center;
@@ -88,8 +88,9 @@ body{
         width: 50%;
         flex-direction: column
     }
-    .ractangle{
-        background-color: red;
+    .equalAndCircleContainer{
+        display: flex;
+        margin-top:20px;
     }
 }
 /* ---------------------------------------->responivity  small*/
@@ -98,10 +99,68 @@ body{
         flex-direction: column;
     }
     .lozengeAndcircleContainer{
-        width: 50%;
-        flex-direction: column
+        width: 100%;
     }
     .ractangle{
+        margin-top: 0px;
+    }
+}
+/* --------------------------------------->animations */
+
+.lozenge1:hover{
+    box-shadow: 3px 5px blue ;  
+    transform: translate(10px,-10px);    
+}
+
+.lozenge2:hover{
+    transform: rotate(370deg);
+    box-shadow: 3px 5px blue ;   
+}
+
+@media only screen and (min-width: 900px){
+    .equalAndCircleContainer{
+        animation: 3s forwards moveRight;
+    }
+    @keyframes moveRight {
+        0% {transform: translateX(-200px);}
+        100%{transform: translateX(0px);}
+    }
+    
+    .ractangle{
+        animation: 3s forwards ractangleBiggest;
+    }
+    @keyframes ractangleBiggest {
+        from{background-color: red;}
+        to{background-color: white;}
+    }
+}
+@media (min-width: 800px) and (max-width: 900px){
+    .ractangle{
+        background-color: white;
+        animation: 3s forwards ractangleBig;
+    }
+    @keyframes ractangleBig {
+        from{background-color: white;}
+        to{background-color: red;}
+    }
+}
+@media (min-width: 583px) and (max-width: 800px){
+    .ractangle{
+        background-color: red;
+        animation: 3s forwards ractangleSmall;
+    }
+    @keyframes ractangleSmall {
+        from{background-color: blue;}
+        to{background-color: red;}
+    }
+}
+@media only screen and (max-width: 583px){
+    .ractangle{
         background-color: blue;
+        animation: 3s forwards ractangleBiggest;
+    }
+    @keyframes ractangleBiggest {
+        from{background-color: red;}
+        to{background-color: blue;}
     }
 }
