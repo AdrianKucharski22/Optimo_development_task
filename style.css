@@ -1,0 +1,40 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: green;
+    height: 100%;
+}
+.menuBar{
+    height: 100px;
+    background-color: olive;
+    border: 5px solid black;
+}
+.lozenge1 , .lozenge2{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    border: 5px solid black;
+    rotate: 45deg;
+}
+.line1,.line2{
+    height: 10px;
+    width: 100px;
+    background-color: blue;
+    border: 5px solid black;
+    margin: 10px;
+}
+.circle{
+    height: 100px;
+    width: 100px;
+    background-color: darkcyan;
+    border: 5px solid black;
+    border-radius: 50%;
+}
+.ractangle{
+    width: 200px;
+    height: 400px;
+    background-color: white;
+    border: 5px solid black;
+    margin: 10px;
+    text-align: center;
+}
